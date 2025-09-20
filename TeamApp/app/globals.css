@@ -1,0 +1,393 @@
+html, body {
+  font-size: 17px;
+  font-family: "Gill Sans", sans-serif;;
+  overflow-x: hidden;
+}
+
+.globalStyle {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Loader */
+.loader {
+  margin:auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  position:fixed;
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #00b33c;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+/* Navbar */
+.image {
+  position: relative;
+  border-radius: 1rem;
+  display: flex;
+  padding: 1rem 0.8rem;
+  margin-left: 5rem;
+  align-items: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.image img {
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  width: 70px;
+  height: 70px;
+}
+.nav-items {
+  position: relative;
+  padding: 0.3rem 0.3rem;
+  margin: 8rem 0rem 13.5rem 0rem;
+  width: 300px;
+}
+.nav-items li {
+  padding: 0.6rem 2.2rem 0.6rem;
+  cursor: pointer;
+  list-style: none;
+}
+.nav-items li a {
+  padding-left: 1rem;
+}
+.nav-items li a {
+  text-decoration: none;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.5rem 0rem;
+  margin: 0rem;
+}
+
+.header .title-footer {
+  margin: -0.2rem 0rem 1.5rem 0rem;
+  width: 2.5rem;
+}
+
+.eventHeader i {
+  margin-left: 0.2rem;
+}
+
+.more {
+  position: fixed;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  margin: -3px 0.2rem;
+  z-index: 1000;
+}
+
+.more ul {
+  list-style: none;
+  margin: 0.2rem 1rem 0.2rem 0.5rem;
+  padding: 0rem;
+}
+
+.more ul li {
+  cursor: pointer;
+  padding-bottom: 0.7rem;
+}
+.more i {
+  padding-right: 0.5rem;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow-y: scroll;
+}
+.users .grid {
+  height: 75vh;
+}
+
+.users .events .grid {
+  height: auto;
+  width: 66.5vh;
+}
+
+.grid table {
+  width: 100%;
+}
+
+.grid table tr {
+  padding: 1rem;
+}
+
+.grid table tr th {
+  padding-left: 0.2rem;
+  text-align: left;
+}
+
+.grid table tr .hidden {
+  display: none;
+}
+
+.grid table tr td {
+  padding-left: 0.2rem;
+  padding-top: 0.8rem;
+}
+
+.grid .th-first, .grid .td-first {
+  text-align: center;
+  width: 80px;
+}
+
+.grid .th-center, .grid .td-center {
+  text-align: center;
+  width: 100px;
+}
+
+.grid .td-first {
+  cursor: pointer;
+}
+
+.grid .alert {
+  color: red;
+}
+
+.team .users td, .players .users td {
+  cursor: pointer;
+}
+
+.grid i {
+  cursor: pointer;
+}
+
+.grid .chk input {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+.grid table button {
+  background-color: transparent;
+  border: none;
+}
+
+.create-items {
+  position: absolute;
+  top: 50px;
+  right: -2.5rem;
+}
+
+input[type="file"]{
+  color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Modal */
+.h-m {
+  height: 75vh;
+}
+.w-s {
+  left: 35rem;
+  width: 480px;
+}
+.w-m {
+  left: 35rem;
+  width: 850px;
+}
+.w-l {
+  left: 30rem;
+  width: 1080px;
+}
+
+.modal-overlay {
+  position: absolute;
+  display: flex;
+  filter: blur();  
+  top: 5rem;
+  z-index: 100;  
+}
+.modal-content {
+  position: relative;
+  padding: 1rem 1rem 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+}
+.modal-content h1 {
+  font-size: 1rem;
+  font-weight: 900;
+  padding-left: 0rem;
+}
+.modal-content .teamLineUp {
+  display: flex;
+  gap: 3.5rem;
+  padding: 0.2rem 0.2rem 1rem 0.2rem;
+  height: 35vh;
+  width: 100%;
+}
+.modal-content .sendEvents {
+  overflow-y: scroll;
+  margin-bottom: 2.5rem;
+  height: 60vh;
+}
+.modal-content .sendEvents h4 {
+  margin-bottom: 0.5rem;
+}
+.modal-content .sendEvents .members {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.modal-content .container {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.w-s .modal-content .container {
+  height: 35vh;
+}
+.w-m .modal-content .container {
+  height: 40vh;
+}
+.modal-content .team, .modal-content .players, .modal.content .user, .modal.content .events {
+  border-radius: 1rem;
+  text-align: left;
+  overflow-y: scroll;
+  margin: 0rem;
+}
+.modal-content .team, .modal-content .players {
+  width: 45%;
+}
+.modal-content .events {
+  flex-grow: 1;
+  width: 100%;
+}
+.modal-content .teamTypes {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 0rem;
+  width: 65vh;
+}
+.modal-content .teamType {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin: 0rem 1rem 0rem 1rem;
+}
+.modal-content tr {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.8rem 0.8rem 0.8rem;
+  margin: 0rem;
+}
+.modal-content tr th {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+.modal-content tr td {
+  padding-top: 0.5rem;
+}
+.modal-content tr td button {
+  border: none;
+  background-color: transparent;
+}
+.modal-content i {
+  padding-right: 1rem;
+}
+.modal-content button i {
+  padding-right: 0rem;
+}
+.modal-content .input-control {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.modal-content label {
+  font-size: 0.9rem;
+  width: 120px;
+}
+.modal-content input {
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  resize: none;
+  outline: none;
+  width: 240px;
+}
+.modal-content .chk input {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+.modal-content .submit-btn, .modal-content .btn {
+  text-align: right;
+  vertical-align: bottom;
+  margin: 0rem 1rem 0rem 1rem;
+}
+.modal-content .event .btn {
+  margin: 0rem 3rem 0rem 1rem;
+}
+.modal-content .submit-btn button {
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.modal-content .btn button {
+  background-color: transparent ;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0rem;
+}
+.modal-content .event .btn button {
+  margin: 0rem 0.5rem 0rem; 
+}
+.close {
+  background-color: transparent;
+  border: none;
+  float: right;
+  margin: -5px 1px;
+}
+.close i {
+  font-size: 1.2rem;
+}
+.teams i {
+  font-size: 1rem;
+}
